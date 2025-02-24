@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Legacy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>     
+    <!-- Navbar -->
+    <header id="navbar-section">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Hogwarts Legacy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="navbar-collapse collapse justify-content-end" id="navbarNav">
+                    <ul class="nav nav-pills d-block d-md-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-jogo">Sobre o Jogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#personagens">Personagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cadastre-se">Cadastre-se</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <!-- Seção do vídeo de fundo -->
+    <section class="video-background">
+        <video class="background-video" autoplay loop muted>
+            <source src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero.mp4?c=b" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+        <!-- Vídeo do trailer no canto inferior direito com controles -->
+        <video class="trailer-video" controls>
+            <source src="/video/trailer.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+        <div class="logo d-flex justify-content-center align-items-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero-logo.png" alt="PORTKEY GAMES: HOGWARTS LEGACY" class="hero-logo img-fluid d-none d-lg-block enter" style="width: 90%;">
+        </div>
+    </section>
+    <div class="container mt-5">
+        <!-- Coluna: Sobre o Jogo -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h3 id="sobre-jogo" class="sobre-jogo-info">Sobre o Jogo</h3>
+                <p>Hogwarts Legacy é um jogo de ação e aventura ambientado no universo mágico de Harry Potter. Os jogadores assumem o papel de um estudante que possui a capacidade de controlar a magia de maneiras únicas. O jogo se passa no século XIX, muito antes dos eventos da série de livros, permitindo que os jogadores explorem um mundo aberto repleto de segredos, criaturas mágicas e desafios. </p>
+                <p>Os jogadores podem frequentar aulas, aprender feitiços, e interagir com personagens icônicos, enquanto desvendam mistérios e enfrentam forças sombrias. Com uma narrativa rica e um ambiente imersivo, Hogwarts Legacy oferece uma experiência única para os fãs da franquia e novos jogadores. Prepare-se para embarcar em uma jornada mágica e descobrir seu próprio destino no mundo bruxo.</p>
+            </div>
+            <div class="col-md-6">
+                <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="/imagens/slide/slide1.jpg" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="/imagens/slide/slide2.jpg" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="/imagens/slide/slide3.jpg" class="d-block w-100" alt="Slide 3">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="/imagens/slide/slide4.jpg" class="d-block w-100" alt="Slide 4">
+                        </div>
+                        <!-- Adicione mais slides conforme necessário -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="personagens-section" style="background-color: #b0b5b1; width: 100%;">
+        <div class="container mt-5">
+            <!-- Coluna: Personagens -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 id="personagens" class="personagens-info">Personagens</h3>
+                    <div class="row">
+                        <!-- Coluna 1: Menu -->
+                        <div class="col-md-3">
+                            <nav class="nav flex-column">
+                                <a id="link-sebastian" class="nav-link active bg-success text-white" href="#" onclick="showCharacter(event, 'sebastian')">Sebastian Sallow</a>
+                                <a id="link-natsai" class="nav-link bg-light text-dark" href="#" onclick="showCharacter(event, 'natsai')">Natsai Onai</a>
+                                <a id="link-poppy" class="nav-link bg-light text-dark" href="#" onclick="showCharacter(event, 'poppy')">Poppy Sweeting</a>
+                                <a id="link-amit" class="nav-link bg-light text-dark" href="#" onclick="showCharacter(event, 'amit')">Amit Thakkar</a>
+                            </nav>
+                            <!-- Imagens de fundo com descrições das casas -->
+                            <div id="sebastian-house" class="house-info" style="display: none;">
+                                <img id="sebastian-background" src="imagens/fundo1.png" alt="Fundo Sebastian" class="img-fluid mt-3">
+                                <p class="mt-2 house-description">Slytherin: Casa que valoriza ambição, astúcia e determinação. Seus membros são conhecidos por sua capacidade de liderança e busca pela grandeza. A casa foi fundada por Salazar Slytherin e tem a serpente como símbolo.</p>
+                            </div>
+                            <div id="natsai-house" class="house-info" style="display: none;">
+                                <img id="natsai-background" src="imagens/fundo2.png" alt="Fundo Natsai" class="img-fluid mt-3">
+                                <p class="mt-2 house-description">Gryffindor: Casa dos corajosos e determinados. Seus membros são conhecidos por sua bravura, ousadia e cavalheirismo. Fundada por Godric Gryffindor, tem o leão como símbolo.</p>
+                            </div>
+                            <div id="poppy-house" class="house-info" style="display: none;">
+                                <img id="poppy-background" src="imagens/fundo4.png" alt="Fundo Poppy" class="img-fluid mt-3">
+                                <p class="mt-2 house-description">Hufflepuff: Casa que valoriza trabalho árduo, dedicação e lealdade. Seus membros são conhecidos por serem justos e pacientes. Fundada por Helga Hufflepuff, tem o texugo como símbolo.</p>
+                            </div>
+                            <div id="amit-house" class="house-info" style="display: none;">
+                                <img id="amit-background" src="imagens/fundo3.png" alt="Fundo Amit" class="img-fluid mt-3">
+                                <p class="mt-2 house-description">Ravenclaw: Casa dos sábios e criativos. Seus membros são conhecidos por sua inteligência, criatividade e busca pelo conhecimento. Fundada por Rowena Ravenclaw, tem a águia como símbolo.</p>
+                            </div>
+                        </div>
+                        <!-- Coluna 2: Foto -->
+                        <div class="col-md-4">
+                            <img id="selected-character-image" src="" alt="Imagem do Personagem" class="img-fluid" style="display: none;">
+                        </div>
+                        <!-- Coluna 3: Descrição -->
+                        <div class="col-md-5">
+                            <div id="character-info">
+                                <div id="sebastian" class="character-info">
+                                    <h5>Sebastian Sallow</h5>
+                                    <p>Um estudante de Slytherin, Sebastian é um amigo leal e um talentoso bruxo. Desde jovem, ele demonstrou um interesse profundo por artes das trevas, o que o leva a explorar feitiços e práticas que muitos consideram perigosos. Sua busca por poder e conhecimento é impulsionada por um desejo de proteger aqueles que ama, mas essa ambição frequentemente o coloca em conflito com seus princípios morais. Sebastian é um personagem complexo, lutando entre suas ambições e a moralidade de suas ações. Ele enfrenta dilemas éticos que desafiam sua lealdade e amizade com o protagonista, especialmente quando se depara com as consequências de suas escolhas.</p>
+                                    <p>Apesar de suas falhas, ele demonstra um profundo desejo de proteger aqueles que ama, o que o torna um aliado valioso em momentos de crise. Através de suas interações, os jogadores podem explorar temas de lealdade, sacrifício e a luta interna entre o bem e o mal. Sua jornada é marcada por crescimento pessoal, e ele aprende a importância de confiar em seus amigos e buscar ajuda quando necessário. Sebastian também revela um lado vulnerável, compartilhando suas inseguranças e medos, o que o torna um personagem mais humano e relacionável. </p>
+                                </div>
+                                <div id="natsai" class="character-info">
+                                    <h5>Natsai Onai</h5>
+                                    <p>Uma estudante de Gryffindor, Natsai é corajosa e determinada. Desde pequena, ela sempre se destacou em magia, mostrando habilidades excepcionais em feitiços e poções. Natsai é conhecida por sua empatia e desejo de ajudar os outros, tornando-se uma aliada valiosa na jornada do jogador. Ela possui uma forte conexão com a natureza e frequentemente se envolve em atividades que promovem a preservação do mundo mágico. Sua coragem é evidente em sua disposição para enfrentar desafios e lutar por justiça, mesmo quando isso significa colocar-se em perigo.</p>
+                                    <p>Natsai é uma líder natural, sempre pronta para inspirar e motivar seus amigos. Ao longo da história, ela enfrenta seus próprios medos e inseguranças, mas sua força interior a ajuda a superar obstáculos. Sua amizade com o protagonista é marcada por momentos de crescimento e aprendizado mútuo, e ela se torna uma fonte de inspiração para aqueles ao seu redor. Natsai também é uma defensora dos direitos das criaturas mágicas, e sua paixão por justiça a leva a se envolver em várias aventuras emocionantes. Ela ensina aos jogadores sobre a importância da empatia e da luta por um mundo melhor, destacando a necessidade de se levantar contra a opressão.</p>
+                                </div>
+                                <div id="poppy" class="character-info">
+                                    <h5>Poppy Sweeting</h5>
+                                    <p>Uma amante de criaturas mágicas, Poppy é uma estudante de Hufflepuff. Desde jovem, ela desenvolveu um forte vínculo com os seres mágicos, dedicando seu tempo a estudá-los e protegê-los. Poppy é gentil e tem um coração generoso, sempre buscando entender as necessidades das criaturas que encontra. Sua paixão pela magia é evidente em tudo o que faz, e ela frequentemente se envolve em aventuras para resgatar criaturas em perigo. Poppy é conhecida por sua coragem ao enfrentar perigos em defesa das criaturas que ama, mostrando um lado altruísta e generoso.</p>
+                                    <p>Sua amizade com o protagonista é cheia de momentos divertidos e emocionantes, e ela traz uma perspectiva única sobre a importância da preservação da vida mágica. Ao longo da história, Poppy enfrenta desafios que testam sua determinação, mas sua paixão pela magia e pelas criaturas a ajuda a superar obstáculos. Ela também ensina aos jogadores sobre a conexão entre bruxos e criaturas, destacando a importância do respeito e da empatia no mundo mágico. Poppy é uma defensora incansável dos direitos das criaturas, e sua luta por justiça a torna uma personagem admirável e inspiradora.</p>
+                                </div>
+                                <div id="amit" class="character-info">
+                                    <h5>Amit Thakkar</h5>
+                                    <p>Um estudante de Ravenclaw, Amit é curioso e inteligente. Desde pequeno, ele sempre teve uma sede insaciável por conhecimento, explorando todos os aspectos da magia. Ele é apaixonado por explorar o mundo mágico e frequentemente compartilha suas descobertas com os amigos, ajudando-os a entender melhor o universo ao seu redor. Amit é conhecido por sua abordagem analítica e seu amor por conhecimento, sempre buscando aprender mais sobre feitiços, poções e a história da magia.</p>
+                                    <p>Sua curiosidade o leva a se envolver em várias aventuras, onde ele usa sua inteligência para resolver problemas e desvendar mistérios. Ao longo da história, Amit enfrenta desafios que testam sua coragem e determinação, mas sua paixão pela magia o ajuda a superar obstáculos. Ele se torna um amigo leal e um aliado valioso, sempre pronto para apoiar o protagonista em sua jornada. Amit também é um defensor da educação e do aprendizado, acreditando que o conhecimento é a chave para um futuro melhor. Sua amizade com o protagonista é marcada por momentos de descoberta e crescimento, e ele se torna uma fonte de inspiração para aqueles que desejam aprender e explorar o mundo mágico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mt-5">
+            <!-- Nova Seção: Formulário e Imagem -->
+            <div class="row mt-5">
+                <!-- Coluna 1: Formulário -->
+                <div class="col-md-6">
+                    <h5 id="cadastre-se" class="cadastro-info">Cadastre-se para poder ganhar uma edição especial do jogo:</h5>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Seu nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Seu e-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Seu telefone</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="DDD 00000-0000" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Sua mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="2" placeholder="Digite sua mensagem" style="resize: none; width: 100%; height: 70px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Enviar</button>
+                    </form>
+                </div>
+                <!-- Coluna 2: Imagem -->
+                <div class="col-md-6">
+                    <img src="imagens/especial.jpg" class="img-especial" alt="Imagem Especial">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Rodapé -->
+    <footer>
+        <div>
+            <h5>Consoles Compatíveis:</h5>
+            <img src="imagens/logo/pc.png" alt="Console 1" style="width: 100px; margin: 0 10px;">
+            <img src="imagens/logo/playstation.png" alt="Console 1" style="width: 100px; margin: 0 10px;">
+            <img src="imagens/logo/xbox.png" alt="Console 1" style="width: 100px; margin: 0 10px;">
+            <img src="imagens/logo/switch.png" alt="Console 1" style="width: 100px; margin: 0 10px;">
+            
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</body>
+</html>

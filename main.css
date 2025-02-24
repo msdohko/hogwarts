@@ -1,0 +1,225 @@
+body {
+    padding-top: 56px; /* Para evitar que o conteúdo fique atrás da navbar fixa */
+}
+
+/* Estilo para o vídeo de fundo */
+.background-video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilo para o vídeo do trailer */
+.trailer-video {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 580px; /* Ajuste conforme necessário */
+}
+
+/* Estilo para a logo */
+.logo {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Estilo para a imagem do personagem */
+#selected-character-image {
+    height: 550px; /* Define a altura da imagem */
+    width: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.personagens-info {
+    padding: 20px;
+}
+#link-sebastian,
+#link-natsai,
+#link-poppy,
+#link-amit {
+    color: black !important;    
+}
+
+#link-sebastian:hover,
+#link-natsai:hover,
+#link-poppy:hover,
+#link-amit:hover {
+    text-decoration: underline;
+}
+
+.sobre-jogo-info {
+    padding: 20px;
+}
+
+.carousel-item {
+    padding-left: 20px;
+}
+
+.img-especial {
+    width: 800px;
+}
+
+.cadastro-info {
+    padding-bottom: 10px;
+}
+
+.btn-custom {
+    background-color: #0e1f2d;
+    color: white; /* Para garantir que o texto seja legível */
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #0e1f2d;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+.personagens-section {
+    padding-bottom: 30px;
+}
+
+/* Estilo para a barra de navegação */
+header .navbar,
+header .navbar-nav,
+header .nav-item,
+header .nav-link,
+header #navbarNav {
+    background-color: #0e1f2d !important;
+    color: white !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.character-info {
+    display: none; /* Esconde a informação do personagem inicialmente */
+}
+
+.sonserina-descricao {
+    display: none;
+    background-color: rgba(14, 31, 45, 0.9);
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.sonserina-descricao.active {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajuste para compensar a altura do header fixo */
+#sobre-jogo,
+#personagens,
+#cadastre-se {
+    scroll-margin-top: 56px; /* Ajustado para a altura exata do header */
+    padding-top: 20px; /* Adiciona um espaço acima do conteúdo */
+}
+
+.house-description {
+    font-size: 0.9rem;
+    color: #333;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .trailer-video {
+        width: 480px;
+    }
+    
+    .img-especial {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .trailer-video {
+        width: 400px;
+    }
+    
+    #selected-character-image {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trailer-video {
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        margin-top: 20px;
+    }
+    
+    #selected-character-image {
+        height: 350px;
+    }
+    
+    .personagens-section .col-md-3,
+    .personagens-section .col-md-4,
+    .personagens-section .col-md-5 {
+        margin-bottom: 20px;
+    }
+    
+    footer img {
+        width: 80px !important;
+        margin: 5px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        max-width: 95%;
+    }
+    
+    #selected-character-image {
+        height: 300px;
+    }
+    
+    .personagens-info,
+    .sobre-jogo-info {
+        text-align: center;
+    }
+    
+    footer img {
+        width: 60px !important;
+        margin: 3px !important;
+    }
+    
+    .house-description {
+        font-size: 0.8rem;
+    }
+}
